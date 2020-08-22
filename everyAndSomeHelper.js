@@ -22,9 +22,5 @@ let myComputers = [
     {name: 'Compaq', ram: 4},
     {name: 'Acer', ram: 32}
 ];
-const allmyComputersCanRunProgram = myComputers.every(function(computer){
-    return computer.ram > 16;
-});
-const onlySomeComputersCanRunProgram = myComputers.some(function(computer){
-    return computer.ram > 16;
-});
+const allmyComputersCanRunProgram = myComputers.every(computer => computer.ram > 16);
+const onlySomeComputersCanRunProgram = myComputers.some( computer => computer.ram > 16);

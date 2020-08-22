@@ -10,9 +10,7 @@ console.log(doubledNumbers);
 
 //utilizando el 'map' el código es
 let newNumbers = [1,2,3];
-const newDoubledNumbers = newNumbers.map(function(number) {
-    return number * 2;
-});
+const newDoubledNumbers = newNumbers.map(number => number * 2);
 console.log(newDoubledNumbers);
 
 //también podemos utilizar 'map' para iterar valores dentro de objetos que están dentro de un array. Por ejemplo:
@@ -20,7 +18,5 @@ let cars = [
     {model: 'Buick', price: '100'},
     {model: 'Camaro', price: '200'}
 ];
-const prices =cars.map(function(car){
-    return car.price;
-});
+const prices =cars.map(car => car.price);
 console.log(prices);

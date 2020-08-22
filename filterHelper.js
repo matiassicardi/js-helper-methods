@@ -21,9 +21,7 @@ let products = [
     { name: 'celery', type: 'vegetable', quantity: 2, price: 15},
     { name: 'orange', type: 'fruit', quantity: 3, price: 20}
 ];
-const filteredFruitProducts = products.filter(function(product) {
-    return product.type === 'fruit';
-});
+const filteredFruitProducts = products.filter(product => product.type === 'fruit');
 console.log(filteredFruitProducts);
 //también podemos utilizar múltiples parámetros para filtrar
 const multiFilteredProducts = products.filter(function(product) {
@@ -34,7 +32,7 @@ const multiFilteredProducts = products.filter(function(product) {
 console.log(multiFilteredProducts);
 //un buen ejemplo de como usar el étodo 'filter' con un array de post y otro de comments
 let post = { id:4, title: 'This is a new post'};
-let coomments = [
+let comments = [
     {postId: 4, content: 'Great!'},
     {postId: 2, content: 'Show the stuff'},
     {postId: 4, content: 'Let me know'},
@@ -42,7 +40,5 @@ let coomments = [
     {postId: 1, content: 'No thanks'}
 ];
 function commentsForPost(post, comments) {
-    return comments.filter(function(comment) {
-        return comment.postId === post.id;
-    });
+    return comments.filter(comment => comment.postId === post.id);
 };

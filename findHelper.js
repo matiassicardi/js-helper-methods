@@ -21,9 +21,7 @@ let users = [
     {name:'Alex'},
     {name:'Bill'}
 ];
-const userFound = users.find(function(user) {
-    return user.name === 'Alex';
-});
+const userFound = users.find(user => user.name === 'Alex');
 console.log(userFound);
 //otra variante del uso del método 'find' usando de ejemplo post y comments
 let blogPosts = [
@@ -32,8 +30,6 @@ let blogPosts = [
 ];
 let blogComment = {postId: 1, content: 'Great job!'};
 const findingPostComment = function postForComment(blogPosts, blogComment) {
-    return blogComment.find(function(blogPost) {
-        return blogPost.id === blogComment.postId;
-    });
+    return blogPosts.find(blogPost => blogPost.id === blogComment.postId);
 };
-console.log(findingPostComment);
+console.log(findingPostComment(blogPosts, blogComment));
