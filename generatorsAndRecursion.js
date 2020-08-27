@@ -8,7 +8,7 @@ class Comment {
         this. children = children;
     }
 
-    //generamla iteración dentro de las 'class constructor' en la que pediremos que itere por cada comentario su contenido y además sus 'comentarios hijos'. Debemos usar el 'for of loop' porque dentro de una 'class constructor' no son válidos los métodos map() ni forEach() 
+    //generamos la iteración dentro de las 'class constructor' en la que pediremos que itere por cada comentario su contenido y además sus 'comentarios hijos'. Debemos usar el 'for of loop' porque dentro de una 'class constructor' no son válidos los métodos map() ni forEach() 
     *[Symbol.iterator]() {
         yield this.content;
         for (let child of this.children) {
@@ -28,4 +28,9 @@ const children = [
 //creamos el 'comentario padre'
 const tree = new Comment('Soy el padre de los comentarios', children)
 
-console.log(tree);
+//sumamos los comentarios a un único array
+const values = [];
+for (let value of tree) {
+    values.push(value);
+};
+console.log(values)
